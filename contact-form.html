@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="assets/images/logoo.png">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+
+    <!-- Navbar -->
+  <body>
+    <nav>
+      <ul class="navbar-links">
+          <img src="assets/images/logoo.png" width="50px">
+          <li>
+              <a href="indek.html" class="menu-active">Home</a>
+          </li>
+          <li>
+              <a href="blog.html">Blog</a>
+          </li>
+     </ul>
+         <a class="nav-contact-button" href="contact-form.html">Contact Me</a>
+    </nav>
+
+    <div class="wrapper">
+        <h1>Registrasi</h1>
+        <form  class="contact-form" onsubmit="submitForm(event)">
+          
+          <div class="form-field">
+            <label for="name">Name</label>
+          <input type="text" id="name" />
+          </div>
+          
+          <div class="form-field">
+            <label for="email">Email</label>
+          <input type="email" id="email" />
+          </div>
+
+          <div class="form-field">
+            <label for="phoneno">Phone Number</label>
+          <input type="number" id="phoneno" />
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject</label>
+          <input type="text" id="subject" />
+          </div>
+          
+          <div class="form-field">
+            <label for="skill">Skill</label>
+          <select name="Skill" id="skill">
+            <option value="#"  hidden>Select Any Skill</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+          </select>
+          </div>
+          
+          <div class="form-field">
+            <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          </div>
+  
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <!-- <script src="assets/js/form.js"></script> -->
+      <script src="assets/js/contact-form.js"></script>
+      <!-- <script src="assets/js/form.js"></script>  -->
+
+  </body>
+</html>
