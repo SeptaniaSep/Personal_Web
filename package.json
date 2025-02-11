@@ -1,0 +1,22 @@
+{
+  "name": "personalweb",
+  "version": "1.0.0",
+  "description": "My First Personal Web",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeptaniaSep/Personal_Web.git"
+  },
+  "author": "Septania Nopa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeptaniaSep/Personal_Web/issues"
+  },
+  "homepage": "https://github.com/SeptaniaSep/Personal_Web#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
