@@ -1,0 +1,65 @@
+{{#>layout currentPage='Blog'}}
+
+  <!-- BLOG LIST -->
+  <main>
+    <h1 style="text-align: center;">My Blogs</h1>
+
+    <div style="width:90%; text-align: right; " >
+      <a href="/blog-creat" style="text-decoration: none;">Creat Blog</a>
+    </div>
+  <section id="blogList" class="blog-list">
+    <article class="blog-item">
+      <div class="blog-item-img">
+        <img src="/images/pt5.jpg" alt="blog-image">
+      </div>
+      <div class="blog-item-text">
+        <div class="blog-item-buttons">
+          <button class="blog-edit-button">Edit Blog</button>
+          <button class="blog-post-button">Post Blog</button>
+        </div>
+
+        <a href="/blog-detail" style="text-decoration: none;">
+          <h1 class="blog-item-title">Pasar coding Indonesia</h1>
+        </a>
+
+
+        <p>30 Januari 2025 11:22 WIB | Septania Nopa</p>
+
+        <p> I am a teacher at a junior high school in Ponorogo Regency, East Java. And I am a fresh graduate in 2024 at
+          a University of UMPO in Ponorogo Regency, East Java. I am a teacher at a junior high school in Ponorogo
+          Regency, East Java. And I am a fresh graduate in 2024 at a University of UMPO in Ponorogo Regency, East Java.
+        </p>
+        <p class="blog-item-relative-time">1 day ago</p>
+
+       
+      </div>
+    </article>
+    {{#each blogs}}
+    <article class="blog-item">
+      <div class="blog-item-img">
+        <img src=" {{this.image}}" alt="blog-image">
+      </div>
+      <div class="blog-item-text">
+        <div class="blog-item-buttons">
+          <button class="blog-edit-button">Edit Blog</button>
+          <button class="blog-post-button">Post Blog</button>
+        </div>
+
+        <a href="/blog-detail" style="text-decoration: none;">
+          <h1 class="blog-item-title"> {{this.title}} </h1>
+        </a>
+
+
+        <p> {{formatDateToWIB this.postedAt}} | {{this.author}} </p>
+
+        <p> {{this.content}} </p>
+        <p class="blog-item-relative-time">{{getRelativeTime this.postedAt}}</p>
+
+       
+      </div>
+    </article>
+    {{/each}}
+  </section>
+</div>
+</main>
+{{/layout}}

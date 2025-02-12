@@ -3,25 +3,37 @@ let testimonials = [
     author: "Septania",
     rating: 5,
     caption: "kereeen abis loh ini maaaaa...!",
-    Image: "ged.png",
+    Image: "pt1.jpeg",
   },
   {
     author: "Fawaz Afif",
     rating: 4,
     caption: "mantap tapi kurang sedikit rapi",
-    Image: "gedu.jpg",
+    Image: "pt2.jpg",
   },
   {
     author: "Varen Zaviar",
     rating: 3,
     caption: "standar sih sesuai dengan hara ya",
-    Image: "mes.PNG",
+    Image: "pt3.jpg",
   },
   {
     author: "Khaira Azzaida",
     rating: 5,
     caption: "bagus banget aku suka, trimaksih kak",
-    Image: "g1.jpg",
+    Image: "pt4.png",
+  },
+  {
+    author: "Ahsa Kahfi",
+    rating: 1,
+    caption: "cukup oke",
+    Image: "pt6.jpeg",
+  },
+  {
+    author: "Narendra Kefifan",
+    rating: 2,
+    caption: "oke laaaah...... ntap brow......",
+    Image: "pt7.jpg",
   },
 ];
 
@@ -32,7 +44,7 @@ const testimonialsHTML = (daftarTestimoni) => {
     .map(
       (testimonial) => `
     <article>
-        <img src="assets/images/${testimonial.Image}" alt="testimonial-image">
+        <img src="/images/${testimonial.Image}" alt="testimonial-image">
           <p class="testimonial-item-caption">
             <i>"${testimonial.caption}"</i>
           </p>

@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="icon" href="assets/images/logoo.png">
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="assets/styles/style.css" />
-  </head>
-
-    <!-- Navbar -->
-  <body>
-    <nav>
-      <ul class="navbar-links">
-          <img src="assets/images/logoo.png" width="50px">
-          <li>
-              <a href="index-old.html" class="menu-active">Home</a>
-          </li>
-          <li>
-              <a href="blog.html">Blog</a>
-          </li>
-     </ul>
-         <a class="nav-contact-button" href="contact-form.html">Contact Me</a>
-    </nav>
+ {{#> layout currentPage='Contact Me'}}
+ 
+    <!-- CONTACT -->
 
     <div class="wrapper">
-        <h1>Registrasi</h1>
+        <h1>Contact Me</h1>
         <form  class="contact-form" onsubmit="submitForm(event)">
           
           <div class="form-field">
@@ -65,9 +43,4 @@
           <button type="submit">Submit</button>
         </form>
       </div>
-      <!-- <script src="assets/js/form.js"></script> -->
-      <script src="assets/js/contact-form.js"></script>
-      <!-- <script src="assets/js/form.js"></script>  -->
-
-  </body>
-</html>
+{{/layout}}

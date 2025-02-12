@@ -37,7 +37,7 @@ function renderBlog() {
        
             <article class="blog-item">
                 <div class="blog-item-img">
-                    <img src="${blogs[index].image}" alt="">
+                    <img src="${blogs[index].image}" alt="blog-image">
                 </div>
                 <div class="blog-item-text">
                     <div class="blog-item-buttons">
@@ -45,16 +45,13 @@ function renderBlog() {
                         <button class="blog-post-button">Post Blog</button>
                     </div>
                     
-                    <a href="blog-detail.html" style="text-decoration: none;">
-                    <h1 class="blog-item-title">Pasar coding Indonesia</h1>
+                    <a href="/blog-detail" style="text-decoration: none;">
+                    <h1 class="blog-item-title">${blogs[index].title}</h1>
                     </a>
-                    <p>${formatDateToWIB(blogs[index].postedAt)} | ${
-      blogs[index].author
-    }
+                    <p>${formatDateToWIB(blogs[index].postedAt)} | ${blogs[index].author}
                     </p>
                     <p>${blogs[index].content}</p>
-                    <p class="blog-item-relative-time">${getRelativeTime(
-                      blogs[index].postedAt
+                    <p class="blog-item-relative-time">${getRelativeTime(blogs[index].postedAt
                     )}</p>
                 </div>
             </article>
@@ -67,7 +64,7 @@ function firstBlogContent() {
  
       <article class="blog-item">
           <div class="blog-item-img">
-              <img src="assets/images/g1.jpg" alt="">
+              <img src="/assets/images/pt5.jpg" alt="blog-image">
           </div>
           <div class="blog-item-text">
               <div class="blog-item-buttons">
@@ -75,7 +72,7 @@ function firstBlogContent() {
                   <button class="blog-post-button">Post Blog</button>
               </div>
 
-              <a href="blog-detail.html" style="text-decoration: none;">
+              <a href="/blog-detail" style="text-decoration: none;">
               <h1>Pasar Coding di Indonesia</h1>
               <p>30 Jan 2025 11:22 WIB | Septania Nopa</p>
               </a>              
@@ -91,71 +88,72 @@ function firstBlogContent() {
       </article>
       
   `;
-}
-function formatDateToWIB() {
-  let date = new Date();
-  // 01 Feb 2025 11:22 WIB
-  let monthList = [
-    "Jan", // bukan 1, tapi 0 ==> bukan nama bulan, bukan angka bulannya, tapi index
-    "Feb",
-    "Mar",
-    "Apr",
-    "Mei",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Okt", // bukan 10 tapi 9, karena yang diambil indexnya
-    "Nov",
-    "Des",
-  ];
+};
 
-  let day = date.getDate().toString().padStart(2, "0");
-  let month = monthList[date.getMonth()];
-  let year = date.getFullYear();
+// function formatDateToWIB() {
+//   let date = new Date();
+//   // 01 Feb 2025 11:22 WIB
+//   let monthList = [
+//     "Jan", // bukan 1, tapi 0 ==> bukan nama bulan, bukan angka bulannya, tapi index
+//     "Feb",
+//     "Mar",
+//     "Apr",
+//     "Mei",
+//     "Jun",
+//     "Jul",
+//     "Aug",
+//     "Sep",
+//     "Okt", // bukan 10 tapi 9, karena yang diambil indexnya
+//     "Nov",
+//     "Des",
+//   ];
 
-  let hours = date.getHours().toString().padStart(2, "0");
-  let minutes = date.getMinutes().toString().padStart(2, "0");
+//   let day = date.getDate().toString().padStart(2, "0");
+//   let month = monthList[date.getMonth()];
+//   let year = date.getFullYear();
 
-  let formattedDate = `${day} ${month} ${year} ${hours}:${minutes} WIB`;
+//   let hours = date.getHours().toString().padStart(2, "0");
+//   let minutes = date.getMinutes().toString().padStart(2, "0");
 
-  return formattedDate;
-}
+//   let formattedDate = `${day} ${month} ${year} ${hours}:${minutes} WIB`;
 
-function getRelativeTime(postTime) {
-  let now = new Date();
-  console.log("WAKTU SEKARANG :", now);
+//   return formattedDate;
+// }
 
-  console.log("WAKTU USER POST :", postTime);
+// function getRelativeTime(postTime) {
+//   let now = new Date();
+//   console.log("WAKTU SEKARANG :", now);
 
-  let diffTime = now - postTime;
-  console.log("selisih waktu :", diffTime);
+//   console.log("WAKTU USER POST :", postTime);
 
-  let diffInSeconds = Math.floor((now - postTime) / 1000);
-  console.log("selisih detik", diffInSeconds);
+//   let diffTime = now - postTime;
+//   console.log("selisih waktu :", diffTime);
 
-  if (diffInSeconds < 60) {
-    return `${diffInSeconds} seconds ago`;
-  }
+//   let diffInSeconds = Math.floor((now - postTime) / 1000);
+//   console.log("selisih detik", diffInSeconds);
 
-  let diffInMinutes = Math.floor(diffInSeconds / 60);
+//   if (diffInSeconds < 60) {
+//     return `${diffInSeconds} seconds ago`;
+//   }
 
-  if (diffInMinutes < 60) {
-    return `${diffInMinutes} minutes ago`;
-  }
+//   let diffInMinutes = Math.floor(diffInSeconds / 60);
 
-  let diffInHours = Math.floor(diffInMinutes / 60);
+//   if (diffInMinutes < 60) {
+//     return `${diffInMinutes} minutes ago`;
+//   }
 
-  if (diffInHours < 24) {
-    return `${diffInHours} hours ago`;
-  }
+//   let diffInHours = Math.floor(diffInMinutes / 60);
 
-  let diffInDays = Math.floor(diffInHours / 24);
+//   if (diffInHours < 24) {
+//     return `${diffInHours} hours ago`;
+//   }
 
-  if (diffInDays < 30) {
-    return `${diffInDays} days ago`;
-  }
+//   let diffInDays = Math.floor(diffInHours / 24);
 
-  let diffInMonth = Math.floor(diffInDays / 30);
-  return `${diffInMonth} month${diffInMonth === 1 ? "" : "s"} ago`;
-}
+//   if (diffInDays < 30) {
+//     return `${diffInDays} days ago`;
+//   }
+
+//   let diffInMonth = Math.floor(diffInDays / 30);
+//   return `${diffInMonth} month${diffInMonth === 1 ? "" : "s"} ago`;
+// }

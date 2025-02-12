@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   box-sizing: border-box;
+  /* background-color: aqua; */
 }
 
 /* NAVBAR */
@@ -181,11 +182,15 @@ margin-top: 0;
    width: 40px;
 }
 
+
  /* SOCIAL */
  .social a, img {
   text-decoration: none;
   padding-right: 8px;
   width: 50px;
+}
+.social {
+  padding-top: 15px;
 }
 
 /* CONTACT FORM STYLE */
@@ -271,25 +276,36 @@ width: auto;
 
 
   /* BLOG LIST STYLES */
-  .blog-list {
-    width: 90%;
-    background-color: rgb(79, 197, 43);
-    justify-content: cente;
+  #blokList {
+    /* text-align: center; */
+  }
+
+.blog-list {
+    width: 100%;
+    margin-top: 30px;
+    /* background-color: rgb(79, 197, 43); */
+    justify-content: center;
 }
 
 .blog-item {
   margin: 20px;
-  height: 230px;
+  height: 260px;
   padding: 15px;
-  border: 1px solid #aaa;
+  padding-bottom: 50px;
+  background-color: #fdfefe;
+  border: 1px solid #cec7ff;
   border-radius: 15px;
   display: flex;
   gap: 15px;
-  background-color: rgb(224, 224, 27);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  /* background-color: rgb(224, 224, 27); */
 }
 
 .blog-item-img img {
   height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  padding: 0 0 ;
 }
 .blog-item-text {
   flex: 1;
@@ -353,6 +369,7 @@ width: auto;
 
 .blog-detail img {
     width: 100%;
+    box-shadow: 5pt;
 }
 
 @media screen and (max-width:768px ){
