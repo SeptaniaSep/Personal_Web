@@ -1,50 +1,45 @@
 function formatDateToWIB(date) {
-    // let date = new Date();
-    // 01 Feb 2025 11:22 WIB
-    let monthList = [
-      "Jan", // bukan 1, tapi 0 ==> bukan nama bulan, bukan angka bulannya, tapi index
-      "Feb",
-      "Mar",
-      "Apr",
-      "Mei",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Okt", // bukan 10 tapi 9, karena yang diambil indexnya
-      "Nov",
-      "Des",
-    ];
-  
-    let day = date.getDate().toString().padStart(2, "0");
-    let month = monthList[date.getMonth()];
-    let year = date.getFullYear();
-  
-    let hours = date.getHours().toString().padStart(2, "0");
-    let minutes = date.getMinutes().toString().padStart(2, "0");
-  
-    let formattedDate = `${day} ${month} ${year} ${hours}:${minutes} WIB`;
-  
-    return formattedDate;
-  }
+  date = new Date(date);
+  // 01 Feb 2025 11:22 WIB
 
-  module.exports = {
-    formatDateToWIB,
-    getRelativeTime,
-  };
+  let monthList = [
+    "Jan", // bukan 1, tapi 0 ==> bukan nama bulan, bukan angka bulannya, tapi index
+    "Feb",
+    "Mar",
+    "Apr",
+    "Mei",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Okt", // bukan 10 tapi 9, karena yang diambil indexnya
+    "Nov",
+    "Des",
+  ];
 
-  
+  let day = date.getDate().toString().padStart(2, "0");
+  let month = monthList[date.getMonth()];
+  let year = date.getFullYear();
+
+  let hours = date.getHours().toString().padStart(2, "0");
+  let minutes = date.getMinutes().toString().padStart(2, "0");
+
+  let formattedDate = `${day} ${month} ${year} ${hours}:${minutes} WIB`;
+
+  return formattedDate;
+}
+
 function getRelativeTime(postTime) {
   let now = new Date();
-  console.log("WAKTU SEKARANG :", now);
+  // console.log("WAKTU SEKARANG :", now);
 
-  console.log("WAKTU USER POST :", postTime);
+  // console.log("WAKTU USER POST :", postTime);
 
   let diffTime = now - postTime;
-  console.log("selisih waktu :", diffTime);
+  // console.log("selisih waktu :", diffTime);
 
   let diffInSeconds = Math.floor((now - postTime) / 1000);
-  console.log("selisih detik", diffInSeconds);
+  // console.log("selisih detik", diffInSeconds);
 
   if (diffInSeconds < 60) {
     return `${diffInSeconds} seconds ago`;
@@ -71,3 +66,8 @@ function getRelativeTime(postTime) {
   let diffInMonth = Math.floor(diffInDays / 30);
   return `${diffInMonth} month${diffInMonth === 1 ? "" : "s"} ago`;
 }
+
+module.exports = {
+  formatDateToWIB,
+  getRelativeTime,
+};

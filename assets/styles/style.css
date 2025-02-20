@@ -29,9 +29,7 @@ nav {
  list-style: none;
  padding: 0%;
 }
-.mobile-menu {
-  display: none;
-}
+/* 
 .menu-active {
   color: rgb(11, 11, 78) !important;
   font-weight: 700;
@@ -58,19 +56,21 @@ a {
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-}
+} */
 
 /* CARD */
 .main-content {
+  width: 1100px;
   display: flex;
-  padding-top: 30px;
-  /* margin: 50px; */
-  padding: 50px;
+  padding-top: 50px;
+  margin: auto;
+  /* padding: 60px; */
 }
 
 .bungkusCard {
   padding: 15px;
   flex-direction: row;
+  justify-content: center;
   gap: 3rem;
 
 }
@@ -112,6 +112,7 @@ a {
 .name {
   text-align: left;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .role {
@@ -140,6 +141,19 @@ a {
   /* background-color: aqua; */
 }
 
+/* @media screen and (max-width:768px ) {
+  .main-content {
+    display: flex;
+    margin: auto;
+    background-color: yellow;
+  }
+  .containerCard{
+    width: 300px;
+    display: flex;
+    margin: 0% auto;
+    background-color: aqua;
+  }
+} */
 
 /* INTRODUCTION */
 
@@ -154,34 +168,8 @@ a {
 
 .introductionSym {
   display: flex;
-  /* background-color: aqua; */
   gap: 2rem;
 }
-#introduction {
-  flex: 2.5;
-}
-
-#what-i-do h1{
-margin-top: 0;
-}
-#technologies {
-   display: flex;
-   gap: 20px;
-}
-
-#socials h2 {
-   margin-top: 0;
-}
-
-#socials a {
-   text-decoration: none;
-   margin-right: 10px;
-}
-
-#socials a img {
-   width: 40px;
-}
-
 
  /* SOCIAL */
  .social a, img {
@@ -260,14 +248,14 @@ margin-top: 0;
 }
 
 .create-blog-form button {
-  font-size: 16px;
+  /* font-size: 16px;
   font-family: "Poppins", serif;
   background-color: rgb(14, 4, 58);
   color: white;
   padding: 10px 35px;
   border-radius: 5px;
   border: none;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 .create-blog-section {
@@ -276,9 +264,6 @@ width: auto;
 
 
   /* BLOG LIST STYLES */
-  #blokList {
-    /* text-align: center; */
-  }
 
 .blog-list {
     width: 100%;
@@ -288,7 +273,7 @@ width: auto;
 }
 
 .blog-item {
-  margin: 20px;
+  margin: 20px 100px;
   height: 260px;
   padding: 15px;
   padding-bottom: 50px;
@@ -333,21 +318,21 @@ width: auto;
 }
 
 .blog-edit-button {
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Poppins", serif;
   background-color: rgb(180, 180, 180);
   color: rgb(0, 0, 0);
-  padding: 10px 35px;
+  padding: 5px 8px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
 }
-.blog-post-button {
-  font-size: 16px;
+.blog-delet-button {
+  font-size: 12px;
   font-family: "Poppins", serif;
   background-color: rgb(14, 4, 58);
   color: rgb(255, 255, 255);
-  padding: 10px 35px;
+  padding: 5px 8px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -361,22 +346,37 @@ width: auto;
 /* BLOG DETAIL STYLES */
 .blog-detail {
     width: 90%;
-    /* margin: 30px auto; */
-    margin-top: 100PX;
+    margin: 30px auto;
     /* background-color: aqua; */
-    /* justify-content: center; */
+    justify-content: center;
+}
+.blog-detail h1 {
+  margin: 20px;
 }
 
 .blog-detail img {
-    width: 100%;
+    width: 50%;
+    display: flexs;
+    margin: 20px;
+    justify-content: center;
     box-shadow: 5pt;
+}
+.blog-detail p {
+  text-align: justify;
+  font-family: poppins;
+  margin: 0px 20px;
 }
 
 @media screen and (max-width:768px ){
-
   .main-content {
     flex-direction: column;
-    margin-bottom: 3px
+    margin: 30px; 
+  }
+}
+/* 
+  .main-content {
+    flex-direction: column;
+    margin: 30px;
   }
   #navMobile {
     display: flex;
@@ -386,14 +386,11 @@ width: auto;
   #introductionSym {
     flex-direction: column;
   }
- 
-}
 
-@media screen and (max-width: 768px) {
   nav {
       padding: 2px 15px;
   }
-  
+ 
   .main-menu {
    display: none;
   }
@@ -451,6 +448,4 @@ width: auto;
   #technologies h2 {
       margin: 5px 0;
   }
-}
-
-
+} */

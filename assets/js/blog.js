@@ -1,4 +1,3 @@
-// blog.js
 let blogs = [];
 
 function addBlog(event) {
@@ -48,10 +47,13 @@ function renderBlog() {
                     <a href="/blog-detail" style="text-decoration: none;">
                     <h1 class="blog-item-title">${blogs[index].title}</h1>
                     </a>
-                    <p>${formatDateToWIB(blogs[index].postedAt)} | ${blogs[index].author}
+                    <p>${formatDateToWIB(blogs[index].postedAt)} | ${
+      blogs[index].author
+    }
                     </p>
                     <p>${blogs[index].content}</p>
-                    <p class="blog-item-relative-time">${getRelativeTime(blogs[index].postedAt
+                    <p class="blog-item-relative-time">${getRelativeTime(
+                      blogs[index].postedAt
                     )}</p>
                 </div>
             </article>
@@ -64,7 +66,7 @@ function firstBlogContent() {
  
       <article class="blog-item">
           <div class="blog-item-img">
-              <img src="/assets/images/pt5.jpg" alt="blog-image">
+              <img src="/images/pt5.jpg" alt="blog-image">
           </div>
           <div class="blog-item-text">
               <div class="blog-item-buttons">
@@ -88,7 +90,7 @@ function firstBlogContent() {
       </article>
       
   `;
-};
+}
 
 // function formatDateToWIB() {
 //   let date = new Date();

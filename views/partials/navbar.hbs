@@ -11,13 +11,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link {{#if (equal currentPage 'Home')}} active fw-bold {{/if}}"  aria-current="page" href="/home">Home</a>
+              <a class="nav-link {{#if (equal currentPage 'Card')}} active fw-bold {{/if}}"  aria-current="page" href="/card">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link  {{#if (equal currentPage 'Blog')}} active fw-bold {{/if}}" aria-current="page" href="/blog">Blog</a>
             </li>
+             <li class="nav-item">
+              <a class="nav-link  {{#if (equal currentPage 'Project List')}} active fw-bold {{/if}}" aria-current="page" href="/project-list">Project</a>
+            </li>
             <li class="nav-item">
-              <a class="nav-link  {{#if (equal currentPage 'Testimonials')}} active fw-bold {{/if}}" href="/testimonials">Testimonial</a>
+              <a class="nav-link  {{#if (equal currentPage 'Testimonials')}} active fw-bold {{/if}}" aria-current="page" href="/testimonials">Testimonial</a>
             </li>
           </ul>
           <a class="btn btn-outline-primary" href="/contact-form">Contact Me</a>
